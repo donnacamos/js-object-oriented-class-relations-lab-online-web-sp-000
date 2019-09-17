@@ -23,7 +23,7 @@ class Driver {
   constructor(name){
     this.name = name;
     this._id = Driver.counter;
-    this.tripsArr = []; 
+    this.tripsArr = [];
     Store.store.drivers.push(this);
   }
 
