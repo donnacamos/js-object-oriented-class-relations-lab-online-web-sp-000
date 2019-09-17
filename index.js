@@ -9,7 +9,7 @@ class Store{
   }
 
   static get store(){
-    Store.singleton = Store.singleton || new Store(); 
+    Store.singleton = Store.singleton || new Store();
     return Store.singleton;
   }
 }
