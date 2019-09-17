@@ -36,6 +36,10 @@ class Driver {
   }
 
   trips(){
-    return Store.store.trips.filter((trip) => trip.driver === this)
+    return Store.store.trips.filter((trip) => trip.driver() === this);
+  }
+
+  passengers(){
+    return Store.store.passengers.filter(p => p.trips().filter(trip => trip.driver() === this).map(trip => trip.passenger()));
   }
 }
